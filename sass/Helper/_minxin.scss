@@ -1,0 +1,85 @@
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleButton($color, $bg-color, $border-color, $fs, $fw, $pd-y, $pd-x) {
+    color: $color;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    font-size: $fs;
+    font-weight: $fw;
+    padding: $pd-y $pd-x;
+    cursor: pointer;
+}
+
+@mixin hoverButton($color, $bg-color, $border-color) {
+    color: $color;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+}
+
+@mixin styleFormSearch($bg-color, $ph-color, $focus-bg-color, $focus-border-color){
+    .input-group{
+        background-color: $bg-color;
+
+        input, .input-group-text{
+            background-color: transparent;
+            border-color: transparent;
+            border-radius: 0;
+        }
+
+        input{
+            box-shadow: none;
+            transition: none;
+            &::placeholder{
+                color: $ph-color;
+            }
+
+            &:focus{
+                border-right: none;
+                background-clip: unset;
+                background-color: $focus-bg-color;
+                border-color: $focus-border-color;
+            }
+
+            &:focus + .input-group-append{
+                border-left-color: transparent;
+                .input-group-text{
+                    
+                    background-color: $focus-bg-color;
+                    border-color: $focus-border-color;
+                }
+            }
+
+        }
+
+        .input-group-append{
+            .input-group-text{
+                color: $color-red-0;
+                padding-top: 0.6rem;
+                cursor: pointer;
+                //&: parent selector
+                &:hover{
+                    color: $color-white-0;
+                    background-color: $color-red-0;
+                }
+            }
+        }
+
+    }
+}
+
+@mixin responsive($screen) {
+    @if map-has-key($map:$breakpoints, $key:$screen){
+        $value: map-get($map:$breakpoints, $key:$screen );
+        @media screen and (max-width: $value){
+            @content;
+        }
+    }
+    @else{
+        @warn "`{$screen}` doesnt exist in breakpoints"
+    }
+
+}

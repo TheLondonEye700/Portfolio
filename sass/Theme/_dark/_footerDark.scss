@@ -1,0 +1,50 @@
+.darkMode{
+    footer{
+        color: $color-dark-5;
+        .footer__top{
+            .nav{
+                .nav-item{
+                    .nav-link{
+                        color: $color-dark-5;
+                    }
+                }
+            }
+
+            .btn-group{
+                .button--dropup{
+                    color: $color-dark-5;
+                    background-color: $color-dark-6;
+                }
+                .dropdown-menu{
+                    
+                    background-color: $color-dark-6;
+                    .dropdown-item{
+                        color: $color-dark-5;
+                        &:hover{
+                            background-color: $color-dark-1;
+                        }
+                    }
+                }
+            }
+        }
+
+        hr{
+            background-color: $color-dark-3;
+        }
+
+        .footer__bottom{
+            .nav-link{
+                color: $color-dark-5;
+            }
+
+            .logo-white{
+                display: inline-block;
+            }
+
+            .logo-dark{
+                display: none;
+            }
+        }
+
+    }
+}

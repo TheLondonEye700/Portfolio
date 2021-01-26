@@ -1,0 +1,184 @@
+.myNavBar{
+    box-shadow: 0 0 1px 1px rgba(20 , 23,28, 0.1),0 3px 1px 0 rgba(20 , 23,28, 0.1);
+    
+    .myNavBar__left{
+        .navbar-brand{
+            flex-grow: 1;
+            text-align: center;
+            margin-right: 0;
+            img{
+                width: 110px;
+            }
+            .logo-white{
+                display: none;
+            }
+        }
+
+        .myNavBar__form-search{
+            flex-grow: 8;
+
+            @include styleFormSearch($color-white-cream, $color-black-light, $color-white-0, $color-gray-4);
+
+            .input-group{       
+                input{
+                    &:focus + .input-group-append{
+                        .input-group-text{
+                            &:hover{
+                                background-color: $color-red-0;
+                            }
+                        }
+                    }
+                }
+
+            }
+            
+        }
+
+        .myNavBar__category{
+            flex-grow: 1;
+            text-align: center;
+            cursor: pointer;
+            @include styleText($color-black-light, $fs-1, $fw-0);    
+            i{
+                color: $color-gray-3;
+            }
+        }
+    }
+
+    .myNavBar__right{
+        .nav-item{
+            padding: $pd-2;
+            border-radius: $border-radius +1;
+            position: relative;
+
+            .nav-link{
+                @include styleText($color-black-light,$fs-1,$fw-0);    
+            }
+
+            .overlay{
+                display: none;
+                position: absolute;
+                top: 110%;
+                right: 0;
+                z-index: 99; // di cung voi position
+                background-color: $color-white-0;
+                width: 330px;
+                padding: $pd-1 $pd-3;
+                text-align: center;
+                box-shadow: 0 4px 16px rgba(20 , 23,28, 0.1);
+                font-size: $fs-1;
+                
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    right: 10%;
+                    top: -9px;
+                    display: block;
+                    width: 15px;
+                    height: 15px;
+                    background-color: $color-white-0;
+                    border-top: 1px solid $color-gray-1;
+                    border-left: 1px solid $color-gray-1;
+                    // box-shadow: 0 4px 16px rgba(20 , 23,28, 0.1);
+                    transform: rotate(45deg);
+                }
+            }
+
+            &:hover{
+                background-color: $color-gray-1;
+                .overlay{
+                    display: block;
+                }
+            }
+        }
+
+        .myNavBar__cart{
+            width: 50px;
+            height: 50px;
+            line-height: 21px;
+            border-radius: 50%;
+            .nav-link{
+                font-size: $fs-3;
+            }
+        }
+
+        .myNavBar__btn{
+            display: flex;
+            .button-white{
+                margin-right: $mg-0;
+            }
+
+            .button{
+                white-space: nowrap;
+            }
+
+            &:hover{
+                background-color: $color-gray-1;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1200px) and (max-width: 1355px){ 
+        .myNavBar__right{    
+                .nav-item{
+                    &.business, &.instructor{
+                        font-size: $fs-1 - 1;
+                        .nav-link{
+                            white-space: nowrap;
+                        }
+                    }
+                } 
+    
+                .myNavBar__btn{
+                    .button{
+                        font-size: $fs-1;
+                    }
+                }
+            
+        }
+
+    }
+
+    @include responsive('extra-large'){
+        .navbar-nav{
+            justify-content: space-around !important;
+            .business, .instructor{
+                display: none;
+            }
+            .myNavBar__btn{
+                .button-white{
+                    margin-right: $mg-1;
+                }
+            }
+        }
+    }
+
+    @include responsive('medium'){
+        flex-wrap: nowrap;
+
+        .myNavBar__left{
+            .myNavBar__category, .myNavBar__form-search{
+                display: none;
+            }
+        }
+        .myNavBar__right{
+            width: 60%;
+            margin-left: auto;
+            .myNavBar__btn{
+                display: none;
+            }
+            .myNavBar__cart{
+                .nav-link{
+                    text-align: center;
+                    // padding-left: $pd-0 - 2;
+                }
+            }
+        }
+
+        
+    }
+
+    
+}
+

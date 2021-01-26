@@ -1,0 +1,68 @@
+.sidebarMini{
+    position: fixed;
+    z-index: 19;
+    top: 25%;
+    right: 0;
+    width: 400px;
+    background-color: $color-gray-4;
+    transform: translateX(100%);
+    transition: 0.5s;
+    .sidebarMini__btn{
+        @include styleButton($color-black-0, $color-gray-4, black, $fs-5, $fw-0, $pd-2, $pd-3);
+        border-radius: 8px 0 0 8px;
+        position: fixed;
+        transform: translateX(-100%);
+        border: 1px solid transparent;
+        outline: none;
+        transition: 0.5s;
+    }
+    .sidebarMini__content{
+        width: 150px;
+        padding: $pd-3;
+        text-align: center;
+        h2{
+            font-size: $fs-0;
+        }
+        .darkModeSwitch{
+            height: 25px;
+            width: 50px;
+            margin: 0 $mg-0 + 5;
+            position: relative;
+            input{
+                display: none;
+                &:checked + .slider{
+                    &::before{
+                        transform: translateX(22px);
+                    }
+                }
+            }
+            .slider{
+                background-color: #cccccc;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                border-radius: 34px;
+                cursor: pointer;
+                &::before{
+                    content: '';
+                    background-color: $color-white-0;
+                    height: 18px;
+                    width: 18px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    position: absolute;
+                    left: 4px;
+                    bottom: 4px;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+
+    &.is-open{
+        transform: translateX(60%);
+    }
+
+}

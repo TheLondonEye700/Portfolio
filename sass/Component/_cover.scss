@@ -1,0 +1,32 @@
+.cover{
+    background-image: url("../img/cover.jpg");
+    @extend %bgImg;
+
+    height: 500px;
+    position: relative;
+    .cover_content{
+        max-width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        h1{
+            @include styleText($color-white-0, $fs-2, $fw-2);
+        }
+
+        p{
+            @include styleText($color-white-0, $fs-3, $fw-0)
+        }
+
+        .cover__form-search{
+            @include styleFormSearch($color-white-0, $color-black-light, $color-white-0, $color-white-0);
+        }
+    }
+
+    @include responsive('small'){
+        .cover_content{
+            max-width: 400px;
+            left: 10%;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.myNavBar .myNavBar__left .navbar-brand {
+  flex-grow: 1;
+  text-align: center;
+  margin-right: 0;
+}
+
+.myNavBar .myNavBar__left .navbar-brand img {
+  width: 110px;
+}
+
+.myNavBar .myNavBar__left .myNavBar__category {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.myNavBar .myNavBar__left .myNavBar__form-search {
+  flex-grow: 8;
+}
+/*# sourceMappingURL=header.css.map */

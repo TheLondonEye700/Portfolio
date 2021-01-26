@@ -1,0 +1,41 @@
+.job{
+    background-color: $color-gray-5;
+    .job__content{
+        .row{
+            padding: $pd-1;
+            .job__item{
+                max-width: 440px;
+                margin: 0 auto;
+                text-align: center;
+                padding: $pd-3;
+                h2{
+                    @include styleText($color-black-light, $fs-3 + 1, $fw-1)
+                }
+            }
+        }
+    }
+
+    @include responsive('medium'){
+        .job__content{
+            .row{
+                .border-right{
+                    border: none!important;
+                }
+                .job__item{
+                    padding: $pd-1;
+                    
+                    h2{
+                        @include styleText($color-black-light, $fs-3 - 2, $fw-1)
+                    }
+                    p{
+                        font-size: $fs-1 + 1;
+                    }
+                    .button-red{
+                        font-size: $fs-1;
+                        padding: $pd-0 - 1;
+                    }
+                }
+            }
+        }
+    }
+}

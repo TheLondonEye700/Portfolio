@@ -1,0 +1,43 @@
+.darkMode{
+    .card{
+        background-color: $color-dark-0;
+        border: 1px solid $color-dark-2;
+        .card-body{
+            .card-title{
+                color: $color-dark-5;
+            }
+            .card-text{
+                color: $color-gray-3;
+            }
+            .course_stars{
+                span{
+                    &:nth-of-type(2){
+                        color: $color-dark-5;
+                    }
+                    &:nth-of-type(3){
+                        color: $color-gray-3;
+                    }
+                }
+            }
+            .course_price{
+                span{
+                    &:first-of-type{
+                        color: $color-gray-3;
+                    }
+                    &:nth-of-type(2){
+                        color: $color-dark-5;
+                    }
+                }
+            }
+        }
+    }
+
+    .card--feedback{
+        background-color: $color-dark-4;
+        .card-body{
+            .card-name{
+                color: $color-dark-5;
+            }
+        }
+    }
+}
