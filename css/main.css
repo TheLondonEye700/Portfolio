@@ -57,6 +57,10 @@ html {
   box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
 }
 
+.myNavBar .col-6.px-0 {
+  max-width: 35%;
+}
+
 .myNavBar .myNavBar__left .navbar-brand {
   flex-grow: 1;
   text-align: center;
@@ -229,7 +233,8 @@ html {
   .myNavBar .navbar-nav {
     justify-content: space-around !important;
   }
-  .myNavBar .navbar-nav .business, .myNavBar .navbar-nav .instructor {
+  .myNavBar .navbar-nav .business,
+  .myNavBar .navbar-nav .instructor {
     display: none;
   }
   .myNavBar .navbar-nav .myNavBar__btn .button-white {
@@ -241,7 +246,8 @@ html {
   .myNavBar {
     flex-wrap: nowrap;
   }
-  .myNavBar .myNavBar__left .myNavBar__category, .myNavBar .myNavBar__left .myNavBar__form-search {
+  .myNavBar .myNavBar__left .myNavBar__category,
+  .myNavBar .myNavBar__left .myNavBar__form-search {
     display: none;
   }
   .myNavBar .myNavBar__right {
@@ -572,7 +578,7 @@ footer .footer__top {
 }
 
 footer .footer__top .nav {
-  height: 110px;
+  height: 145px;
 }
 
 footer .footer__top .nav .nav-item {

@@ -1,61 +1,54 @@
-.myNavBar{
-    box-shadow: 0 0 1px 1px rgba(20 , 23,28, 0.1),0 3px 1px 0 rgba(20 , 23,28, 0.1);
-    
-    .myNavBar__left{
-        .navbar-brand{
+.myNavBar {
+    box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
+    .col-6.px-0 {
+        max-width: 35%;
+    }
+    .myNavBar__left {
+        .navbar-brand {
             flex-grow: 1;
             text-align: center;
             margin-right: 0;
-            img{
+            img {
                 width: 110px;
             }
-            .logo-white{
+            .logo-white {
                 display: none;
             }
         }
-
-        .myNavBar__form-search{
+        .myNavBar__form-search {
             flex-grow: 8;
-
             @include styleFormSearch($color-white-cream, $color-black-light, $color-white-0, $color-gray-4);
-
-            .input-group{       
-                input{
-                    &:focus + .input-group-append{
-                        .input-group-text{
-                            &:hover{
+            .input-group {
+                input {
+                    &:focus+.input-group-append {
+                        .input-group-text {
+                            &:hover {
                                 background-color: $color-red-0;
                             }
                         }
                     }
                 }
-
             }
-            
         }
-
-        .myNavBar__category{
+        .myNavBar__category {
             flex-grow: 1;
             text-align: center;
             cursor: pointer;
-            @include styleText($color-black-light, $fs-1, $fw-0);    
-            i{
+            @include styleText($color-black-light, $fs-1, $fw-0);
+            i {
                 color: $color-gray-3;
             }
         }
     }
-
-    .myNavBar__right{
-        .nav-item{
+    .myNavBar__right {
+        .nav-item {
             padding: $pd-2;
             border-radius: $border-radius +1;
             position: relative;
-
-            .nav-link{
-                @include styleText($color-black-light,$fs-1,$fw-0);    
+            .nav-link {
+                @include styleText($color-black-light, $fs-1, $fw-0);
             }
-
-            .overlay{
+            .overlay {
                 display: none;
                 position: absolute;
                 top: 110%;
@@ -65,11 +58,9 @@
                 width: 330px;
                 padding: $pd-1 $pd-3;
                 text-align: center;
-                box-shadow: 0 4px 16px rgba(20 , 23,28, 0.1);
+                box-shadow: 0 4px 16px rgba(20, 23, 28, 0.1);
                 font-size: $fs-1;
-                
-
-                &::before{
+                &::before {
                     content: '';
                     position: absolute;
                     right: 10%;
@@ -84,101 +75,87 @@
                     transform: rotate(45deg);
                 }
             }
-
-            &:hover{
+            &:hover {
                 background-color: $color-gray-1;
-                .overlay{
+                .overlay {
                     display: block;
                 }
             }
         }
-
-        .myNavBar__cart{
+        .myNavBar__cart {
             width: 50px;
             height: 50px;
             line-height: 21px;
             border-radius: 50%;
-            .nav-link{
+            .nav-link {
                 font-size: $fs-3;
             }
         }
-
-        .myNavBar__btn{
+        .myNavBar__btn {
             display: flex;
-            .button-white{
+            .button-white {
                 margin-right: $mg-0;
             }
-
-            .button{
+            .button {
                 white-space: nowrap;
             }
-
-            &:hover{
+            &:hover {
                 background-color: $color-gray-1;
             }
         }
     }
-
-    @media screen and (min-width: 1200px) and (max-width: 1355px){ 
-        .myNavBar__right{    
-                .nav-item{
-                    &.business, &.instructor{
-                        font-size: $fs-1 - 1;
-                        .nav-link{
-                            white-space: nowrap;
-                        }
-                    }
-                } 
-    
-                .myNavBar__btn{
-                    .button{
-                        font-size: $fs-1;
+    @media screen and (min-width: 1200px) and (max-width: 1355px) {
+        .myNavBar__right {
+            .nav-item {
+                &.business,
+                &.instructor {
+                    font-size: $fs-1 - 1;
+                    .nav-link {
+                        white-space: nowrap;
                     }
                 }
-            
+            }
+            .myNavBar__btn {
+                .button {
+                    font-size: $fs-1;
+                }
+            }
         }
-
     }
-
-    @include responsive('extra-large'){
-        .navbar-nav{
+    @include responsive('extra-large') {
+        .navbar-nav {
             justify-content: space-around !important;
-            .business, .instructor{
+            .business,
+            .instructor {
                 display: none;
             }
-            .myNavBar__btn{
-                .button-white{
+            .myNavBar__btn {
+                .button-white {
                     margin-right: $mg-1;
                 }
             }
         }
     }
-
-    @include responsive('medium'){
+    @include responsive('medium') {
         flex-wrap: nowrap;
-
-        .myNavBar__left{
-            .myNavBar__category, .myNavBar__form-search{
+        .myNavBar__left {
+            .myNavBar__category,
+            .myNavBar__form-search {
                 display: none;
             }
         }
-        .myNavBar__right{
+        .myNavBar__right {
             width: 60%;
             margin-left: auto;
-            .myNavBar__btn{
+            .myNavBar__btn {
                 display: none;
             }
-            .myNavBar__cart{
-                .nav-link{
+            .myNavBar__cart {
+                .nav-link {
                     text-align: center;
                     // padding-left: $pd-0 - 2;
                 }
             }
         }
-
-        
     }
-
-    
 }
-
