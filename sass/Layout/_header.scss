@@ -1,18 +1,11 @@
 .myNavBar {
     box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
-    .col-6.px-0 {
-        max-width: 35%;
-    }
     .myNavBar__left {
         .navbar-brand {
-            flex-grow: 1;
             text-align: center;
             margin-right: 0;
             img {
-                width: 110px;
-            }
-            .logo-white {
-                display: none;
+                width: 130px;
             }
         }
         .myNavBar__form-search {
@@ -30,19 +23,9 @@
                 }
             }
         }
-        .myNavBar__category {
-            flex-grow: 1;
-            text-align: center;
-            cursor: pointer;
-            @include styleText($color-black-light, $fs-1, $fw-0);
-            i {
-                color: $color-gray-3;
-            }
-        }
     }
     .myNavBar__right {
         .nav-item {
-            padding: $pd-2;
             border-radius: $border-radius +1;
             position: relative;
             .nav-link {
@@ -71,7 +54,6 @@
                     background-color: $color-white-0;
                     border-top: 1px solid $color-gray-1;
                     border-left: 1px solid $color-gray-1;
-                    // box-shadow: 0 4px 16px rgba(20 , 23,28, 0.1);
                     transform: rotate(45deg);
                 }
             }
@@ -82,17 +64,20 @@
                 }
             }
         }
-        .myNavBar__cart {
-            width: 50px;
-            height: 50px;
+        .myNavBar__icon {
+            &.nav-item {
+                &:hover {
+                    background-color: inherit;
+                }
+            }
+            display: flex;
             line-height: 21px;
-            border-radius: 50%;
             .nav-link {
-                font-size: $fs-3;
+                font-size: $fs-5;
+                padding: 0 $pd-1;
             }
         }
         .myNavBar__btn {
-            display: flex;
             .button-white {
                 margin-right: $mg-0;
             }
@@ -107,8 +92,7 @@
     @media screen and (min-width: 1200px) and (max-width: 1355px) {
         .myNavBar__right {
             .nav-item {
-                &.business,
-                &.instructor {
+                &.business {
                     font-size: $fs-1 - 1;
                     .nav-link {
                         white-space: nowrap;
@@ -126,9 +110,6 @@
         .navbar-nav {
             justify-content: space-around !important;
             .business,
-            .instructor {
-                display: none;
-            }
             .myNavBar__btn {
                 .button-white {
                     margin-right: $mg-1;

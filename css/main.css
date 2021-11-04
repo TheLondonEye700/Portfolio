@@ -57,22 +57,13 @@ html {
   box-shadow: 0 0 1px 1px rgba(20, 23, 28, 0.1), 0 3px 1px 0 rgba(20, 23, 28, 0.1);
 }
 
-.myNavBar .col-6.px-0 {
-  max-width: 35%;
-}
-
 .myNavBar .myNavBar__left .navbar-brand {
-  flex-grow: 1;
   text-align: center;
   margin-right: 0;
 }
 
 .myNavBar .myNavBar__left .navbar-brand img {
-  width: 110px;
-}
-
-.myNavBar .myNavBar__left .navbar-brand .logo-white {
-  display: none;
+  width: 130px;
 }
 
 .myNavBar .myNavBar__left .myNavBar__form-search {
@@ -129,21 +120,7 @@ html {
   background-color: #ec5252;
 }
 
-.myNavBar .myNavBar__left .myNavBar__category {
-  flex-grow: 1;
-  text-align: center;
-  cursor: pointer;
-  color: #505763;
-  font-size: 13px;
-  font-weight: normal;
-}
-
-.myNavBar .myNavBar__left .myNavBar__category i {
-  color: #a1a7b3;
-}
-
 .myNavBar .myNavBar__right .nav-item {
-  padding: 5px;
   border-radius: 3px;
   position: relative;
 }
@@ -190,19 +167,18 @@ html {
   display: block;
 }
 
-.myNavBar .myNavBar__right .myNavBar__cart {
-  width: 50px;
-  height: 50px;
-  line-height: 21px;
-  border-radius: 50%;
-}
-
-.myNavBar .myNavBar__right .myNavBar__cart .nav-link {
-  font-size: 18px;
-}
-
-.myNavBar .myNavBar__right .myNavBar__btn {
+.myNavBar .myNavBar__right .myNavBar__icon {
   display: flex;
+  line-height: 21px;
+}
+
+.myNavBar .myNavBar__right .myNavBar__icon.nav-item:hover {
+  background-color: inherit;
+}
+
+.myNavBar .myNavBar__right .myNavBar__icon .nav-link {
+  font-size: 24px;
+  padding: 0 15px;
 }
 
 .myNavBar .myNavBar__right .myNavBar__btn .button-white {
@@ -218,10 +194,10 @@ html {
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1355px) {
-  .myNavBar .myNavBar__right .nav-item.business, .myNavBar .myNavBar__right .nav-item.instructor {
+  .myNavBar .myNavBar__right .nav-item.business {
     font-size: 12px;
   }
-  .myNavBar .myNavBar__right .nav-item.business .nav-link, .myNavBar .myNavBar__right .nav-item.instructor .nav-link {
+  .myNavBar .myNavBar__right .nav-item.business .nav-link {
     white-space: nowrap;
   }
   .myNavBar .myNavBar__right .myNavBar__btn .button {
@@ -233,10 +209,7 @@ html {
   .myNavBar .navbar-nav {
     justify-content: space-around !important;
   }
-  .myNavBar .navbar-nav .business,
-  .myNavBar .navbar-nav .instructor {
-    display: none;
-  }
+  .myNavBar .navbar-nav .business .button-white,
   .myNavBar .navbar-nav .myNavBar__btn .button-white {
     margin-right: 20px;
   }
@@ -707,52 +680,6 @@ footer .footer__bottom ul .nav-link {
   font-weight: normal;
 }
 
-.cover .cover_content .cover__form-search .input-group {
-  background-color: #fff;
-}
-
-.cover .cover_content .cover__form-search .input-group input, .cover .cover_content .cover__form-search .input-group .input-group-text {
-  background-color: transparent;
-  border-color: transparent;
-  border-radius: 0;
-}
-
-.cover .cover_content .cover__form-search .input-group input {
-  box-shadow: none;
-  transition: none;
-}
-
-.cover .cover_content .cover__form-search .input-group input::placeholder {
-  color: #505763;
-}
-
-.cover .cover_content .cover__form-search .input-group input:focus {
-  border-right: none;
-  background-clip: unset;
-  background-color: #fff;
-  border-color: #fff;
-}
-
-.cover .cover_content .cover__form-search .input-group input:focus + .input-group-append {
-  border-left-color: transparent;
-}
-
-.cover .cover_content .cover__form-search .input-group input:focus + .input-group-append .input-group-text {
-  background-color: #fff;
-  border-color: #fff;
-}
-
-.cover .cover_content .cover__form-search .input-group .input-group-append .input-group-text {
-  color: #ec5252;
-  padding-top: 0.6rem;
-  cursor: pointer;
-}
-
-.cover .cover_content .cover__form-search .input-group .input-group-append .input-group-text:hover {
-  color: #fff;
-  background-color: #ec5252;
-}
-
 @media screen and (max-width: 576px) {
   .cover .cover_content {
     max-width: 400px;
@@ -961,14 +888,6 @@ body.darkMode {
 
 .darkMode .myNavBar {
   background-color: #0e1c2f;
-}
-
-.darkMode .myNavBar__left .navbar-brand .logo-black {
-  display: none;
-}
-
-.darkMode .myNavBar__left .navbar-brand .logo-white {
-  display: inline-block;
 }
 
 .darkMode .myNavBar__left .myNavBar__form-search .input-group {
