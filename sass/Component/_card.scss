@@ -1,79 +1,59 @@
-.card{
+.card {
     height: 275px;
-    .card-body{
+    .card-body {
         padding: 1rem 0.75rem;
-        .card-title{
+        .card-title {
             @include styleText($color-black-0, $fs-0, $fw-2)
         }
-        .card-text{
+        .card-text {
             @include styleText($color-gray-0, $fs-1 - 1, $fw-0);
             margin: $mg-0 0;
         }
-        .course_stars{
-            span{
-                &:first-of-type{
-                    i{
-                        @include styleText($color-yellow-0, $fs-1 - 1, $fw-3)   
-                    }
-                }
-                &:nth-of-type(2){
-                    @include styleText($color-gray-0, $fs-1 - 1, $fw-1)   
-                }
-                &:nth-of-type(3){
-                    @include styleText($color-gray-0, $fs-1 - 1, $fw-0)   
-                }
+        .course_stars {
+            span {
+                @include styleText($color-gray-0, $fs-1 - 1, $fw-1)
             }
         }
-        .course_price{
+        .course_price {
             text-align: right;
             padding: $pd-2;
-            span{
-                &:first-of-type{
-                    @include styleText($color-gray-0, $fs-1, $fw-0);
-                    text-decoration: line-through;
-                }
-                &:nth-of-type(2){
-                    @include styleText($color-black-0, $fs-0, $fw-2)
-                }
+            span {
+                @include styleText($color-black-0, $fs-0, $fw-2)
             }
         }
     }
-
-    @media screen and (min-width: 625px){
-        .card-body{
-            .card-title{
+    @media screen and (min-width: 625px) {
+        .card-body {
+            .card-title {
                 @include styleText($color-black-0, $fs-1 + 1, $fw-2);
                 margin-bottom: 0;
             }
         }
-}
+    }
 }
 
 // dat ten card co dau "--" -> the hien modify
-.card--feedback{
+.card--feedback {
     height: 280px;
-    .card-body{
+    .card-body {
         padding: 2rem;
-        .card_top{
+        .card_top {
             display: flex;
             margin-bottom: 1rem;
-            .card__avatar{  
+            .card__avatar {
                 margin-right: $mg-2 - 5;
-
-                img{
+                img {
                     width: 64px;
                     height: 64px;
                     border-radius: 50%;
                 }
             }
-            .card__name{
+            .card__name {
                 margin-bottom: 0;
             }
         }
-        .card-text{
+        .card-text {
             @include styleText($color-black-0, $fs-0, $fw-0)
         }
     }
-
-    
 }

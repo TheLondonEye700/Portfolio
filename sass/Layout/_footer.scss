@@ -1,4 +1,9 @@
 footer {
+    h2 {
+        font-size: $fs-5;
+    }
+    width: 90%;
+    margin: auto;
     @include styleText($color-gray-0, $fs-1, $fw-0);
     .footer__top {
         width: 90%;

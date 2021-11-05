@@ -8,11 +8,8 @@ $('.course_carousel').owlCarousel({
             items: 2,
             margin: 5
         },
-        650: {
-            items: 3
-        },
         990: {
-            items: 4
+            items: 3
         }
     }
 })

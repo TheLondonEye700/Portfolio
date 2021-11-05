@@ -1,53 +1,59 @@
-.courses{
+.courses {
     margin: $mg-2 0;
-    .courses_content{
-        .row{
+    .courses_content {
+        .row {
             margin-right: 0;
             margin-left: 0;
         }
-        
         width: 90%;
         margin: auto;
-
-        .course_left{ 
+        .course_left {
             background-color: $color-gray-1;
             padding: $pd-1 2rem 0 2rem;
             display: flex;
             align-items: center;
-            h2{
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+            h2 {
                 @include styleText($color-black-0, $fs-3 + 2, $fw-0)
             }
         }
-
-        .course_right{
-            #myTab{
+        .course_right {
+            #myTab {
                 margin-bottom: $mg-2;
-                .nav-link{
+                .nav-link {
                     border: none;
                     color: $color-black-0;
-                    &.active{
+                    &.active {
                         border-bottom: 5px solid $color-blue-0;
                     }
-                    &:hover{
+                    &:hover {
                         color: $color-blue-0;
                     }
                 }
             }
-            
-            
+            #myTabContent {
+                #dev {
+                    padding: 0 $pd-1;
+                    p {
+                        color: $color-black-light;
+                        line-height: 25px;
+                    }
+                }
+            }
         }
-        
     }
-
-
-    @include responsive('extra-large'){
-        .courses_content{
-            .course_left{ 
+    @include responsive('extra-large') {
+        .courses_content {
+            .course_left {
                 padding: $pd-1 1.5rem 0 1.5rem;
-                h2{
+                h2 {
                     @include styleText($color-black-0, $fs-3, $fw-0)
                 }
-                p{
+                p {
                     font-size: $fs-1 + 1;
                 }
             }

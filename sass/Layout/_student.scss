@@ -1,21 +1,18 @@
-.student{
-    padding: $pd-3 + 5 0;
-    margin-top: $mg-1;
-    .student__content{
+.student {
+    margin-bottom: $mg-4;
+    .student__content {
         width: 90%;
         margin: 0 auto;
-        h2{
+        h2 {
             font-size: $fs-5;
             margin-bottom: $mg-2;
         }
-        
     }
-
-    @media screen and (min-width: 640px) and (max-width: 760px){
-        .student__content{
-            .card-body{
+    @media screen and (min-width: 640px) and (max-width: 760px) {
+        .student__content {
+            .card-body {
                 padding: 1.5rem;
-                p{
+                p {
                     font-size: $fs-1 +1;
                 }
             }
