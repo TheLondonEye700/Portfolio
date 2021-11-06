@@ -362,19 +362,6 @@ html {
   }
 }
 
-.viewing {
-  padding: 20px;
-}
-
-.viewing .viewing_content {
-  width: 90%;
-  margin: auto;
-}
-
-.viewing .viewing_content h2 {
-  font-size: 1.25rem;
-}
-
 .catagories {
   margin: 45px 0;
 }
@@ -551,7 +538,7 @@ footer .footer__bottom ul .nav-link {
 }
 
 .cover {
-  background-image: url("../img/cover_part.jpg");
+  background-image: url("../img/cover.jpg");
   height: 500px;
   position: relative;
 }
