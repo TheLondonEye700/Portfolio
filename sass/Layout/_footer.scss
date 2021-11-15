@@ -7,7 +7,7 @@ footer {
     @include styleText($color-gray-0, $fs-1, $fw-0);
     .footer__top {
         width: 90%;
-        margin: $mg-4 auto;
+        margin: $mg-2 auto;
         .nav {
             height: 145px;
             .nav-item {

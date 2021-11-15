@@ -430,7 +430,7 @@ footer h2 {
 
 footer .footer__top {
   width: 90%;
-  margin: 40px auto;
+  margin: 25px auto;
 }
 
 footer .footer__top .nav {
@@ -914,22 +914,6 @@ body.darkMode {
 
 .darkMode .catagories .catagories__content .catagories__item:hover {
   box-shadow: 0 0 1px 1px #152e4d, 0 3px 1px 0 #152e4d;
-}
-
-.darkMode .partner {
-  background-color: #132238;
-}
-
-.darkMode .job {
-  background-color: #132238;
-}
-
-.darkMode .job .job__content .row .job__item h2 {
-  color: #d8e2ef;
-}
-
-.darkMode .job .job__content .row .border-right {
-  border-right: 1px solid #344050 !important;
 }
 
 .darkMode footer {
