@@ -42,15 +42,6 @@ footer {
             margin-right: $mg-0 + 5;
             padding-bottom: $pd-1;
         }
-        .logo-white {
-            display: none;
-        }
-        ul {
-            .nav-link {
-                color: $color-blue-0;
-                padding-left: 0;
-            }
-        }
     }
     @include responsive('medium') {
         .footer__top {

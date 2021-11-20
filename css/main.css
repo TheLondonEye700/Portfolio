@@ -209,6 +209,9 @@ html {
   .myNavBar .navbar-nav {
     justify-content: space-around !important;
   }
+  .myNavBar .navbar-nav .nav-item.business {
+    display: none;
+  }
   .myNavBar .navbar-nav .business .button-white,
   .myNavBar .navbar-nav .myNavBar__btn .button-white {
     margin-right: 20px;
@@ -227,7 +230,8 @@ html {
     width: 60%;
     margin-left: auto;
   }
-  .myNavBar .myNavBar__right .myNavBar__btn {
+  .myNavBar .myNavBar__right .contact,
+  .myNavBar .myNavBar__right .myNavBar__icon {
     display: none;
   }
   .myNavBar .myNavBar__right .myNavBar__cart .nav-link {
@@ -474,15 +478,6 @@ footer .footer__bottom img {
   padding-bottom: 15px;
 }
 
-footer .footer__bottom .logo-white {
-  display: none;
-}
-
-footer .footer__bottom ul .nav-link {
-  color: #007791;
-  padding-left: 0;
-}
-
 @media screen and (max-width: 768px) {
   footer .footer__top .col-4 {
     padding-right: 0;
@@ -513,6 +508,10 @@ footer .footer__bottom ul .nav-link {
   font-weight: 600;
   padding: 9px 10px;
   cursor: pointer;
+}
+
+.button-red a {
+  color: inherit;
 }
 
 .button-red:hover {

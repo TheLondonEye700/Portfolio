@@ -36,7 +36,7 @@
                 position: absolute;
                 top: 110%;
                 right: 0;
-                z-index: 99; // di cung voi position
+                z-index: 99; // goes with position
                 background-color: $color-white-0;
                 width: 330px;
                 padding: $pd-1 $pd-3;
@@ -109,6 +109,9 @@
     @include responsive('extra-large') {
         .navbar-nav {
             justify-content: space-around !important;
+            .nav-item.business {
+                display: none;
+            }
             .business,
             .myNavBar__btn {
                 .button-white {
@@ -128,7 +131,8 @@
         .myNavBar__right {
             width: 60%;
             margin-left: auto;
-            .myNavBar__btn {
+            .contact,
+            .myNavBar__icon {
                 display: none;
             }
             .myNavBar__cart {
