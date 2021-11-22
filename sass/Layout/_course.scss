@@ -9,16 +9,13 @@
         margin: auto;
         .course_left {
             background-color: $color-gray-1;
-            padding: $pd-1 2rem 0 2rem;
+            padding: 0;
             display: flex;
             align-items: center;
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
-            }
-            h2 {
-                @include styleText($color-black-0, $fs-3 + 2, $fw-0)
             }
         }
         .course_right {
@@ -46,16 +43,14 @@
             }
         }
     }
-    @include responsive('extra-large') {
+    @include responsive('medium') {
         .courses_content {
             .course_left {
-                padding: $pd-1 1.5rem 0 1.5rem;
-                h2 {
-                    @include styleText($color-black-0, $fs-3, $fw-0)
-                }
-                p {
-                    font-size: $fs-1 + 1;
-                }
+                height: 400px;
+                padding: 1.5rem 0;
+            }
+            div {
+                height: inherit;
             }
         }
     }

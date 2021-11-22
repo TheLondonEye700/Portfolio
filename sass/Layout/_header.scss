@@ -8,21 +8,6 @@
                 width: 130px;
             }
         }
-        .myNavBar__form-search {
-            flex-grow: 8;
-            @include styleFormSearch($color-white-cream, $color-black-light, $color-white-0, $color-gray-4);
-            .input-group {
-                input {
-                    &:focus+.input-group-append {
-                        .input-group-text {
-                            &:hover {
-                                background-color: $color-red-0;
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
     .myNavBar__right {
         .nav-item {
